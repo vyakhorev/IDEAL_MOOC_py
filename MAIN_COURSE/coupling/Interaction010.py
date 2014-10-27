@@ -29,3 +29,4 @@ class c_Interaction010(c_Intercation):
     def setResult(self, a_result):
         self.result = a_result
 
+

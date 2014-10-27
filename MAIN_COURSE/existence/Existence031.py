@@ -12,10 +12,11 @@ class c_Existence031(c_Existence030):
     and of using the weight of activated interactions to balance the decision.
     """
     def initExistence(self):
-        super(c_Existence031, self).initExistence()  # super(c_Existence031, self) <=> c_Existence030
+        super(c_Existence031, self).initExistence()  # super(c_Existence031, self) links to c_Existence030 methods
         self.T1 = 8
         self.T2 = 15
         self.clock = 0
+        self.setSatisfactionCounter(0)
 
     def step(self):
         anticipations = self.anticipate()

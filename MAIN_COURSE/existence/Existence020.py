@@ -23,8 +23,6 @@ class c_Existence020(c_Existence010):
         r2 = self.createOrGetResult(self.LABEL_R2)
         #Change the valence of interactions to change the agent's motivation
         self.addOrGetPrimitiveInteraction(e1, r1, -1)
-        self.addOrGetPrimitiveInteraction(e1, r2, 1)
-        self.addOrGetPrimitiveInteraction(e2, r1, -1)
         self.addOrGetPrimitiveInteraction(e2, r2, 1)
         self.setPreviousExperience(e1)
 
@@ -33,7 +31,6 @@ class c_Existence020(c_Existence010):
         if self.getMood() == "PAINED":
             experience = self.getOtherExperience(experience)
         result = self.returnResult010(experience)
-        # What about valence here?..
         enactedInteraction = self.addOrGetPrimitiveInteraction(experience, result, 0)
         if enactedInteraction.getValence() >= 0:
             self.setMood("PLEASED")

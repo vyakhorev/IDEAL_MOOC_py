@@ -46,6 +46,7 @@ class c_Existence030(c_Existence020):
         """
         preInteraction = self.getEnactedInteraction()
         postInteraction = interaction
+        #TODO: error here - postInteraction should be None (as in original implementation
         if not(preInteraction is None):
             self.addOrGetCompositeInteraction(preInteraction, postInteraction)
 
@@ -114,7 +115,8 @@ class c_Existence030(c_Existence020):
         self.enactedInteraction = enactedInteraction
 
     def getEnactedInteraction(self):
-        return self.enactedInteraction
+        if hasattr(self, "enactedInteraction"):
+            return self.enactedInteraction
 
     def returnResult030(self, experience):
         """

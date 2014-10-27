@@ -1,0 +1,229 @@
+@[0] #[Mighty Ernest] : my hp:100
+@[0] #[Mighty Ernest] : enact act[sword strike] expect None
+@[0] #[Wizard Vasya] : my hp:100
+@[0] #[Wizard Vasya] : enact act[throw fireball] expect None
+@[5] #[Mighty Ernest] : result hit
+@[5] #[Mighty Ernest] : my mood is FRUSTRATED
+@[5] #[Mighty Ernest] : i feel PLEASED
+@[5] #[Mighty Ernest] : my hp:100
+@[5] #[Mighty Ernest] : enact act[sword strike] expect hit
+@[7] #[Wizard Vasya] : result hit
+@[7] #[Wizard Vasya] : my mood is FRUSTRATED
+@[7] #[Wizard Vasya] : i feel PAINED
+@[7] #[Wizard Vasya] : my hp:83
+@[7] #[Wizard Vasya] : enact act[heal] expect None
+@[10] #[Mighty Ernest] : result hit
+@[10] #[Mighty Ernest] : my mood is SATISFIED
+@[10] #[Mighty Ernest] : i feel PAINED
+@[10] #[Mighty Ernest] : my hp:75
+@[10] #[Mighty Ernest] : enact act[heal] expect None
+@[17] #[Wizard Vasya] : result healed
+@[17] #[Wizard Vasya] : my mood is FRUSTRATED
+@[17] #[Wizard Vasya] : i feel PLEASED
+@[17] #[Wizard Vasya] : my hp:100
+@[17] #[Wizard Vasya] : enact act[heal] expect healed
+@[20] #[Mighty Ernest] : result healed
+@[20] #[Mighty Ernest] : my mood is FRUSTRATED
+@[20] #[Mighty Ernest] : i feel PLEASED
+@[20] #[Mighty Ernest] : my hp:100
+@[20] #[Mighty Ernest] : enact act[heal] expect healed
+@[27] #[Wizard Vasya] : result healed
+@[27] #[Wizard Vasya] : my mood is SATISFIED
+@[27] #[Wizard Vasya] : i feel PLEASED
+@[27] #[Wizard Vasya] : my hp:100
+@[27] #[Wizard Vasya] : enact act[heal] expect healed
+@[30] #[Mighty Ernest] : result healed
+@[30] #[Mighty Ernest] : my mood is SATISFIED
+@[30] #[Mighty Ernest] : i feel PLEASED
+@[30] #[Mighty Ernest] : my hp:100
+@[30] #[Mighty Ernest] : enact act[heal] expect healed
+@[37] #[Wizard Vasya] : result healed
+@[37] #[Wizard Vasya] : my mood is SATISFIED
+@[37] #[Wizard Vasya] : i feel PLEASED
+@[37] #[Wizard Vasya] : my hp:100
+@[37] #[Wizard Vasya] : enact act[heal] expect healed
+@[40] #[Mighty Ernest] : result healed
+@[40] #[Mighty Ernest] : my mood is SATISFIED
+@[40] #[Mighty Ernest] : i feel PLEASED
+@[40] #[Mighty Ernest] : my hp:100
+@[40] #[Mighty Ernest] : enact act[heal] expect healed
+@[47] #[Wizard Vasya] : result healed
+@[47] #[Wizard Vasya] : my mood is BORED
+@[47] #[Wizard Vasya] : i feel PLEASED
+@[47] #[Wizard Vasya] : my hp:100
+@[47] #[Wizard Vasya] : enact act[throw fireball] expect hit
+@[50] #[Mighty Ernest] : result healed
+@[50] #[Mighty Ernest] : my mood is BORED
+@[50] #[Mighty Ernest] : i feel PLEASED
+@[50] #[Mighty Ernest] : my hp:100
+@[50] #[Mighty Ernest] : enact act[sword strike] expect hit
+@[54] #[Wizard Vasya] : result hit
+@[54] #[Wizard Vasya] : my mood is SATISFIED
+@[54] #[Wizard Vasya] : i feel PAINED
+@[54] #[Wizard Vasya] : my hp:100
+@[54] #[Wizard Vasya] : enact act[heal] expect healed
+@[55] #[Mighty Ernest] : result hit
+@[55] #[Mighty Ernest] : my mood is SATISFIED
+@[55] #[Mighty Ernest] : i feel PAINED
+@[55] #[Mighty Ernest] : my hp:75
+@[55] #[Mighty Ernest] : enact act[heal] expect healed
+@[64] #[Wizard Vasya] : result healed
+@[64] #[Wizard Vasya] : my mood is SATISFIED
+@[64] #[Wizard Vasya] : i feel PLEASED
+@[64] #[Wizard Vasya] : my hp:100
+@[64] #[Wizard Vasya] : enact act[heal] expect healed
+@[65] #[Mighty Ernest] : result healed
+@[65] #[Mighty Ernest] : my mood is SATISFIED
+@[65] #[Mighty Ernest] : i feel PLEASED
+@[65] #[Mighty Ernest] : my hp:100
+@[65] #[Mighty Ernest] : enact act[heal] expect healed
+@[74] #[Wizard Vasya] : result healed
+@[74] #[Wizard Vasya] : my mood is BORED
+@[74] #[Wizard Vasya] : i feel PLEASED
+@[74] #[Wizard Vasya] : my hp:100
+@[74] #[Wizard Vasya] : enact act[throw fireball] expect hit
+@[75] #[Mighty Ernest] : result healed
+@[75] #[Mighty Ernest] : my mood is BORED
+@[75] #[Mighty Ernest] : i feel PLEASED
+@[75] #[Mighty Ernest] : my hp:100
+@[75] #[Mighty Ernest] : enact act[sword strike] expect hit
+@[80] #[Mighty Ernest] : result hit
+@[80] #[Mighty Ernest] : my mood is SATISFIED
+@[80] #[Mighty Ernest] : i feel PAINED
+@[80] #[Mighty Ernest] : my hp:100
+@[80] #[Mighty Ernest] : enact act[heal] expect healed
+@[81] #[Wizard Vasya] : result hit
+@[81] #[Wizard Vasya] : my mood is SATISFIED
+@[81] #[Wizard Vasya] : i feel PAINED
+@[81] #[Wizard Vasya] : my hp:83
+@[81] #[Wizard Vasya] : enact act[heal] expect healed
+@[90] #[Mighty Ernest] : result healed
+@[90] #[Mighty Ernest] : my mood is SATISFIED
+@[90] #[Mighty Ernest] : i feel PLEASED
+@[90] #[Mighty Ernest] : my hp:100
+@[90] #[Mighty Ernest] : enact act[heal] expect healed
+@[91] #[Wizard Vasya] : result healed
+@[91] #[Wizard Vasya] : my mood is SATISFIED
+@[91] #[Wizard Vasya] : i feel PLEASED
+@[91] #[Wizard Vasya] : my hp:100
+@[91] #[Wizard Vasya] : enact act[heal] expect healed
+@[100] #[Mighty Ernest] : result healed
+@[100] #[Mighty Ernest] : my mood is BORED
+@[100] #[Mighty Ernest] : i feel PLEASED
+@[100] #[Mighty Ernest] : my hp:100
+@[100] #[Mighty Ernest] : enact act[sword strike] expect hit
+@[101] #[Wizard Vasya] : result healed
+@[101] #[Wizard Vasya] : my mood is BORED
+@[101] #[Wizard Vasya] : i feel PLEASED
+@[101] #[Wizard Vasya] : my hp:100
+@[101] #[Wizard Vasya] : enact act[throw fireball] expect hit
+@[105] #[Mighty Ernest] : result hit
+@[105] #[Mighty Ernest] : my mood is SATISFIED
+@[105] #[Mighty Ernest] : i feel PAINED
+@[105] #[Mighty Ernest] : my hp:100
+@[105] #[Mighty Ernest] : enact act[heal] expect healed
+@[108] #[Wizard Vasya] : result hit
+@[108] #[Wizard Vasya] : my mood is SATISFIED
+@[108] #[Wizard Vasya] : i feel PAINED
+@[108] #[Wizard Vasya] : my hp:83
+@[108] #[Wizard Vasya] : enact act[heal] expect healed
+@[115] #[Mighty Ernest] : result healed
+@[115] #[Mighty Ernest] : my mood is SATISFIED
+@[115] #[Mighty Ernest] : i feel PLEASED
+@[115] #[Mighty Ernest] : my hp:100
+@[115] #[Mighty Ernest] : enact act[heal] expect healed
+@[118] #[Wizard Vasya] : result healed
+@[118] #[Wizard Vasya] : my mood is SATISFIED
+@[118] #[Wizard Vasya] : i feel PLEASED
+@[118] #[Wizard Vasya] : my hp:100
+@[118] #[Wizard Vasya] : enact act[heal] expect healed
+@[125] #[Mighty Ernest] : result healed
+@[125] #[Mighty Ernest] : my mood is BORED
+@[125] #[Mighty Ernest] : i feel PLEASED
+@[125] #[Mighty Ernest] : my hp:100
+@[125] #[Mighty Ernest] : enact act[sword strike] expect hit
+@[128] #[Wizard Vasya] : result healed
+@[128] #[Wizard Vasya] : my mood is BORED
+@[128] #[Wizard Vasya] : i feel PLEASED
+@[128] #[Wizard Vasya] : my hp:100
+@[128] #[Wizard Vasya] : enact act[throw fireball] expect hit
+@[130] #[Mighty Ernest] : result hit
+@[130] #[Mighty Ernest] : my mood is SATISFIED
+@[130] #[Mighty Ernest] : i feel PAINED
+@[130] #[Mighty Ernest] : my hp:100
+@[130] #[Mighty Ernest] : enact act[heal] expect healed
+@[135] #[Wizard Vasya] : result hit
+@[135] #[Wizard Vasya] : my mood is SATISFIED
+@[135] #[Wizard Vasya] : i feel PAINED
+@[135] #[Wizard Vasya] : my hp:83
+@[135] #[Wizard Vasya] : enact act[heal] expect healed
+@[140] #[Mighty Ernest] : result healed
+@[140] #[Mighty Ernest] : my mood is SATISFIED
+@[140] #[Mighty Ernest] : i feel PLEASED
+@[140] #[Mighty Ernest] : my hp:100
+@[140] #[Mighty Ernest] : enact act[heal] expect healed
+@[145] #[Wizard Vasya] : result healed
+@[145] #[Wizard Vasya] : my mood is SATISFIED
+@[145] #[Wizard Vasya] : i feel PLEASED
+@[145] #[Wizard Vasya] : my hp:100
+@[145] #[Wizard Vasya] : enact act[heal] expect healed
+@[150] #[Mighty Ernest] : result healed
+@[150] #[Mighty Ernest] : my mood is BORED
+@[150] #[Mighty Ernest] : i feel PLEASED
+@[150] #[Mighty Ernest] : my hp:100
+@[150] #[Mighty Ernest] : enact act[sword strike] expect hit
+@[155] #[Wizard Vasya] : result healed
+@[155] #[Wizard Vasya] : my mood is BORED
+@[155] #[Wizard Vasya] : i feel PLEASED
+@[155] #[Wizard Vasya] : my hp:83
+@[155] #[Wizard Vasya] : enact act[throw fireball] expect hit
+@[155] #[Mighty Ernest] : result hit
+@[155] #[Mighty Ernest] : my mood is SATISFIED
+@[155] #[Mighty Ernest] : i feel PAINED
+@[155] #[Mighty Ernest] : my hp:100
+@[155] #[Mighty Ernest] : enact act[heal] expect healed
+@[162] #[Wizard Vasya] : result hit
+@[162] #[Wizard Vasya] : my mood is SATISFIED
+@[162] #[Wizard Vasya] : i feel PAINED
+@[162] #[Wizard Vasya] : my hp:83
+@[162] #[Wizard Vasya] : enact act[heal] expect healed
+@[165] #[Mighty Ernest] : result healed
+@[165] #[Mighty Ernest] : my mood is SATISFIED
+@[165] #[Mighty Ernest] : i feel PLEASED
+@[165] #[Mighty Ernest] : my hp:100
+@[165] #[Mighty Ernest] : enact act[heal] expect healed
+@[172] #[Wizard Vasya] : result healed
+@[172] #[Wizard Vasya] : my mood is SATISFIED
+@[172] #[Wizard Vasya] : i feel PLEASED
+@[172] #[Wizard Vasya] : my hp:100
+@[172] #[Wizard Vasya] : enact act[heal] expect healed
+@[175] #[Mighty Ernest] : result healed
+@[175] #[Mighty Ernest] : my mood is BORED
+@[175] #[Mighty Ernest] : i feel PLEASED
+@[175] #[Mighty Ernest] : my hp:100
+@[175] #[Mighty Ernest] : enact act[sword strike] expect hit
+@[180] #[Mighty Ernest] : result hit
+@[180] #[Mighty Ernest] : my mood is SATISFIED
+@[180] #[Mighty Ernest] : i feel PAINED
+@[180] #[Mighty Ernest] : my hp:100
+@[180] #[Mighty Ernest] : enact act[heal] expect healed
+@[182] #[Wizard Vasya] : result healed
+@[182] #[Wizard Vasya] : my mood is BORED
+@[182] #[Wizard Vasya] : i feel PLEASED
+@[182] #[Wizard Vasya] : my hp:100
+@[182] #[Wizard Vasya] : enact act[throw fireball] expect hit
+@[189] #[Wizard Vasya] : result hit
+@[189] #[Wizard Vasya] : my mood is SATISFIED
+@[189] #[Wizard Vasya] : i feel PAINED
+@[189] #[Wizard Vasya] : my hp:100
+@[189] #[Wizard Vasya] : enact act[heal] expect healed
+@[190] #[Mighty Ernest] : result healed
+@[190] #[Mighty Ernest] : my mood is SATISFIED
+@[190] #[Mighty Ernest] : i feel PLEASED
+@[190] #[Mighty Ernest] : my hp:100
+@[190] #[Mighty Ernest] : enact act[heal] expect healed
+@[199] #[Wizard Vasya] : result healed
+@[199] #[Wizard Vasya] : my mood is SATISFIED
+@[199] #[Wizard Vasya] : i feel PLEASED
+@[199] #[Wizard Vasya] : my hp:100
+@[199] #[Wizard Vasya] : enact act[heal] expect healed

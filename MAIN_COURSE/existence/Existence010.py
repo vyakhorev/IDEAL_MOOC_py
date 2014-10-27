@@ -82,7 +82,8 @@ class c_Existence010(c_Existence):
         * @param label: The label of this interaction.
         * @return The interaction.
         """
-        return self.interactions[label]
+        if self.interactions.has_key(label):
+            return self.interactions[label]
 
     def predict(self, experience):
         """
@@ -141,7 +142,8 @@ class c_Existence010(c_Existence):
         self.mood = a_mood
 
     def getPreviousExperience(self):
-        return self.previous_experience
+        if hasattr(self, "previous_experience"):
+            return self.previous_experience
 
     def setPreviousExperience(self, an_experience):
         self.previous_experience = an_experience

@@ -1,0 +1,641 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1251">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.0.1  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Alexey Vyakhorev">
+	<META NAME="CREATED" CONTENT="20141026;23421032">
+	<META NAME="CHANGEDBY" CONTENT="Alexey Vyakhorev">
+	<META NAME="CHANGED" CONTENT="20141028;375303">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: ru-RU }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="ru-RU" DIR="LTR">
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm">First
+homework with IDEAL MOOC 2014</P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">A small
+program simulates a fight between a swordsman (<FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Mighty
+Ernest)</SPAN></FONT></FONT><SPAN LANG="en-US"> and a wizard (</SPAN><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Wizard
+Vasya)</SPAN></FONT></FONT><SPAN LANG="en-US">. They both have an
+attack and a heal action. The interaction cycle is the same as in the
+examples provided by Olivier &ndash; still, the code uses SimPy
+package, so it is a simple Discrete Event System</SPAN><SPAN LANG="ru-RU">:
+</SPAN><SPAN LANG="en-US">each action have different latency,
+real-time. This example demonstrates that multiagent setting is
+possible, though different latency of actions could lead to confusing
+learning scenarios.</SPAN></P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">
+<BR>
+</P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">
+The task is to mix the <SPAN STYLE="font-weight: normal">#IDEAL_MOOC010
+(anticipate the correct result) and #IDEAL_MOOC020 (if you feel
+pained, try something else). So the agent still does not have any
+deep memory. They have moods (BORED, FRUSTRATED, SATISFIED) and
+feelings (PLEASED, PAINED)</SPAN></P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+<BR>
+</P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+The interaction cycle (&ldquo;step&rdquo; in dev_agent) starts with
+calling &ldquo;do_select_action&rdquo;. 
+</P>
+<OL>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	If mood = &quot;BORED&quot; or feelings = &quot;PAINED&quot; then
+	choose any random action except the one activated last time.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	Else choose the same action as before.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	Predict the result.</P>
+</OL>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+<BR>
+</P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+Then the agent executes action in environment (by yielding a
+process). It waits till execution is finished.</P>
+<OL>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	Environment records hitpoints agent had before enacting an action.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	The process waits some time and then the action is applied. This is
+	a crucial point.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	Environment records hitpoints agent have after enacting an action.
+	If the agent became more healthy, it receives a valence = 1. If the
+	health stays the same, valence = 0. If it have lost some hitpoints
+	valence = -1. To my mind, valence is an external reward/punishment.
+	So it should be calculated in Environment, not in Interaction.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	The actual result and valence are told to the agent</P>
+</OL>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+<BR>
+</P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+No I call &ldquo;do_introspect&rdquo;.</P>
+<OL>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	Agent gets SATISFIED if it was able to predict the result.
+	FRUSTRATED otherwise. If it is SATISFIED for long (3 cycles), it
+	gets BORED.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	Agent memorize action and actual result.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	Agent memorize valence that comes with this action and result.
+	Though, the chosen action is indirectly connected with feelings.
+	Agent may choose &ldquo;heal&rdquo; and receive heavy attacks during
+	the action, that would result in negative valence from environment.
+	I've implemented a small memory effect for recorded valence. If the
+	new received valence differs from the recorded one, then the record
+	change to be the average of them. This could be named a memory of
+	sensors &ndash; pain or pleasure effects lasts longer. So the
+	observed valence differs from the received one.</P>
+	<LI><P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+	If the observed valence is negative, then the agent feels PAINED. It
+	feels PLEASED otherwise.</P>
+</OL>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+<BR>
+</P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+LOG FROM THE SYSTEM <I><B>with comments</B></I> (time is in the
+brackets [ ], 1 unit of time = 0.1 seconds)</P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: normal">
+<BR>
+</P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">
+<FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[0]Both
+agents randomly choose attacks and do not know what to expect.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">
+<FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[0]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[0]
+#[Mighty Ernest] : enact act[sword strike] expect None</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[0]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[0]
+#[Wizard Vasya] : enact act[throw fireball] expect None</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[5]
+Ernest was able to hit first. It is FRUSTRATED, he expected nothing
+to happen. It is PLEASED since fireball from Vasya is still far away.
+Ernest continue to strike since it is not PAINED and not yet bored.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[5]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[5]
+#[Mighty Ernest] : my mood is FRUSTRATED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[5]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[5]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[5]
+#[Mighty Ernest] : enact act[sword strike] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[7]
+Vasya's fireball reached Ernest. Vasya is FRUSTRATED. Vasya feel
+PAINED since Ernest hit him with a sword at [5]. Since he feels
+PAINED It decides to try something else, which is healing (random).</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[7]
+#[Wizard Vasya] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[7]
+#[Wizard Vasya] : my mood is FRUSTRATED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[7]
+#[Wizard Vasya] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[7]
+#[Wizard Vasya] : my hp:83</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[7]
+#[Wizard Vasya] : enact act[heal] expect None</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[10]
+Ernest delivered a second hit to Vasya. He expected the attack to
+result in &ldquo;hit&rdquo; - that's why he is SATISFIED, not because
+he likes to deliver pain to Vasya. Still, he feels PAINED since he
+received a fireball. That's why he had to choose the other action &ndash;
+healing.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[10]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[10]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[10]
+#[Mighty Ernest] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[10]
+#[Mighty Ernest] : my hp:75</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[10]
+#[Mighty Ernest] : enact act[heal] expect None</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[17]
+Vasya healed himself. He is FRUSTRATED since it is the first time he
+finishes healing. Vasya is PLEASED because he is more healthy than
+it'd been before &ndash; he is cured from all the sword strikes.
+Since he is PLEASED, he continues to act healing.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[17]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[17]
+#[Wizard Vasya] : my mood is FRUSTRATED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[17]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[17]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[17]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[20]
+Ernest healed himself. Same story as with Vasya.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[20]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[20]
+#[Mighty Ernest] : my mood is FRUSTRATED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[20]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[20]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[20]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[27]
+Vasya continues to heal himself. Valence from this action is lower
+than one since he cannot heal up higher than 100. Still, it doesn't
+matter for him since he enjoys valence being equal to 0 as well.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[27]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[27]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[27]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[27]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[27]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[30]
+Ernest continues to heal himself.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[30]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[30]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[30]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[30]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[30]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[37]
+Vasya continues to heal himself. </B></I></FONT></FONT>
+</P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[37]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[37]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[37]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[37]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[37]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[40]
+Ernest continues to heal himself.</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[40]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[40]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[40]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[40]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[40]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[47]
+Vasya is BORED with healing. He done it already 3 times! He chooses
+the other action that is enabled to him &ndash; he fires a fireball! </B></I></FONT></FONT>
+</P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[47]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[47]
+#[Wizard Vasya] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[47]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[47]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[47]
+#[Wizard Vasya] : enact act[throw fireball] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[50]
+Ernest got BORED with healing too. He strikes!</B></I></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[50]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[50]
+#[Mighty Ernest] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[50]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[50]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[50]
+#[Mighty Ernest] : enact act[sword strike] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I><B>[54]
+ </B></I><FONT FACE="Courier New, monospace"><I><B>Vasya is SATISFIED
+&ndash; he knew that &ldquo;</B></I></FONT><I><B>throw fireball&rdquo;
+finishes with &ldquo;hit&rdquo;! Still, he feels </B></I><FONT FACE="Courier New, monospace"><I><B>PAINED.
+This happens because his sensors have some primitive memory. Valence
+from (&ldquo;</B></I></FONT><I><B>throw fireball&rdquo;, &ldquo;hit&rdquo;)
+is still negative, he received a sword attack at [7]. The valence of
+</B></I><FONT FACE="Courier New, monospace"><I><B>(&ldquo;</B></I></FONT><I><B>throw
+fireball&rdquo;, &ldquo;hit&rdquo;) is now -0,5 instead of -1 (since
+his hp remained constant). Still, because his &ldquo;sensor&rdquo;
+still feels </B></I><FONT FACE="Courier New, monospace"><I><B>PAINED
+from throwing fireballs, he switches back to healing. </B></I></FONT></FONT></FONT>
+</P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[54]
+#[Wizard Vasya] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[54]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[54]
+#[Wizard Vasya] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[54]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[54]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><B>[55]
+Ernest feels PAINED because he received a fireball. He switches to
+the other tactics &ndash; healing.</B></FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[55]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[55]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[55]
+#[Mighty Ernest] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[55]
+#[Mighty Ernest] : my hp:75</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[55]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[64]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[64]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[64]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[64]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[64]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[65]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[65]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[65]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[65]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[65]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[74]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[74]
+#[Wizard Vasya] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[74]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[74]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[74]
+#[Wizard Vasya] : enact act[throw fireball] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[75]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[75]
+#[Mighty Ernest] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[75]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[75]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[75]
+#[Mighty Ernest] : enact act[sword strike] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[80]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[80]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[80]
+#[Mighty Ernest] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[80]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[80]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[81]
+#[Wizard Vasya] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[81]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[81]
+#[Wizard Vasya] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[81]
+#[Wizard Vasya] : my hp:83</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[81]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[90]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[90]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[90]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[90]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[90]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[91]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[91]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[91]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[91]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[91]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[100]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[100]
+#[Mighty Ernest] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[100]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[100]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[100]
+#[Mighty Ernest] : enact act[sword strike] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[101]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[101]
+#[Wizard Vasya] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[101]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[101]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[101]
+#[Wizard Vasya] : enact act[throw fireball] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[105]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[105]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[105]
+#[Mighty Ernest] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[105]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[105]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[108]
+#[Wizard Vasya] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[108]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[108]
+#[Wizard Vasya] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[108]
+#[Wizard Vasya] : my hp:83</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[108]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[115]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[115]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[115]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[115]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[115]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[118]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[118]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[118]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[118]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[118]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[125]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[125]
+#[Mighty Ernest] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[125]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[125]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[125]
+#[Mighty Ernest] : enact act[sword strike] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[128]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[128]
+#[Wizard Vasya] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[128]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[128]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[128]
+#[Wizard Vasya] : enact act[throw fireball] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[130]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[130]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[130]
+#[Mighty Ernest] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[130]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[130]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[135]
+#[Wizard Vasya] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[135]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[135]
+#[Wizard Vasya] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[135]
+#[Wizard Vasya] : my hp:83</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[135]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[140]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[140]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[140]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[140]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[140]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[145]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[145]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[145]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[145]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[145]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[150]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[150]
+#[Mighty Ernest] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[150]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[150]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[150]
+#[Mighty Ernest] : enact act[sword strike] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Wizard Vasya] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Wizard Vasya] : my hp:83</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Wizard Vasya] : enact act[throw fireball] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Mighty Ernest] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[155]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[162]
+#[Wizard Vasya] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[162]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[162]
+#[Wizard Vasya] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[162]
+#[Wizard Vasya] : my hp:83</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[162]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[165]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[165]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[165]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[165]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[165]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[172]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[172]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[172]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[172]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[172]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[175]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[175]
+#[Mighty Ernest] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[175]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[175]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[175]
+#[Mighty Ernest] : enact act[sword strike] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[180]
+#[Mighty Ernest] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[180]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[180]
+#[Mighty Ernest] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[180]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[180]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[182]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[182]
+#[Wizard Vasya] : my mood is BORED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[182]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[182]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[182]
+#[Wizard Vasya] : enact act[throw fireball] expect hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[189]
+#[Wizard Vasya] : result hit</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[189]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[189]
+#[Wizard Vasya] : i feel PAINED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[189]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[189]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[190]
+#[Mighty Ernest] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[190]
+#[Mighty Ernest] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[190]
+#[Mighty Ernest] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[190]
+#[Mighty Ernest] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[190]
+#[Mighty Ernest] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[199]
+#[Wizard Vasya] : result healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[199]
+#[Wizard Vasya] : my mood is SATISFIED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[199]
+#[Wizard Vasya] : i feel PLEASED</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[199]
+#[Wizard Vasya] : my hp:100</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt">@[199]
+#[Wizard Vasya] : enact act[heal] expect healed</FONT></FONT></P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P LANG="en-US" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>

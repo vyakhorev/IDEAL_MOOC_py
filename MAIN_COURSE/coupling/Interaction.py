@@ -20,3 +20,12 @@ class c_Intercation(object):
     def setResult(self, a_result):
         # a_result is the interaction's result.
         pass
+
+    def __hash__(self):
+        #this allows any c_Intercation to serve as a key in a dict()
+        return hash(self.label)
+
+    def __eq__(x, y):
+        #this is checked when the hash-codes are even
+        if (y is not None) and (x is not None):
+            return x.label == y.label
