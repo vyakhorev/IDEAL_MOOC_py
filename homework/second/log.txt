@@ -1,0 +1,420 @@
+@[0] #[Mighty Ernest] : my hp:100
+@[0] #[Mighty Ernest] : ...context None
+@[0] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[0] #[Mighty Ernest] : enact: [select self]
+@[0] #[Wizard Vasya] : my hp:100
+@[0] #[Wizard Vasya] : ...context None
+@[0] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[0] #[Wizard Vasya] : enact: [throw fireball]
+@[0] #[Mighty Ernest] : result: [targeting self]
+@[0] #[Mighty Ernest] : ...learned a primitive interaction [[select self] -> [targeting self] v: 0]
+@[0] #[Mighty Ernest] : i feel PLEASED
+@[0] #[Mighty Ernest] : my hp:100
+@[0] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]
+@[0] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[0] #[Mighty Ernest] : enact: [sword strike]
+@[5] #[Mighty Ernest] : result: [it hurts]
+@[5] #[Mighty Ernest] : ...learned a primitive interaction [[sword strike] -> [it hurts] v: -2]
+@[5] #[Mighty Ernest] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[sword strike] -> [it hurts] v: -2]]
+@[5] #[Mighty Ernest] : i feel PAINED
+@[5] #[Mighty Ernest] : my hp:83
+@[5] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]
+@[5] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[5] #[Mighty Ernest] : enact: [select self]
+@[5] #[Mighty Ernest] : result: [targeting self]
+@[5] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[select self] -> [targeting self] v: 0]]
+@[5] #[Mighty Ernest] : i feel PLEASED
+@[5] #[Mighty Ernest] : my hp:83
+@[5] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]
+@[5] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2]]
+@[5] #[Mighty Ernest] : enact: [select self]
+@[5] #[Mighty Ernest] : result: [targeting self]
+@[5] #[Mighty Ernest] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[select self] -> [targeting self] v: 0]]
+@[5] #[Mighty Ernest] : i feel PLEASED
+@[5] #[Mighty Ernest] : my hp:83
+@[5] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]
+@[5] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[5] #[Mighty Ernest] : enact: [heal]
+@[7] #[Wizard Vasya] : result: [it hurts]
+@[7] #[Wizard Vasya] : ...learned a primitive interaction [[throw fireball] -> [it hurts] v: -2]
+@[7] #[Wizard Vasya] : i feel PAINED
+@[7] #[Wizard Vasya] : my hp:75
+@[7] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[7] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[7] #[Wizard Vasya] : enact: [select self]
+@[7] #[Wizard Vasya] : result: [targeting self]
+@[7] #[Wizard Vasya] : ...learned a primitive interaction [[select self] -> [targeting self] v: 0]
+@[7] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[select self] -> [targeting self] v: 0]]
+@[7] #[Wizard Vasya] : i feel PLEASED
+@[7] #[Wizard Vasya] : my hp:75
+@[7] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]
+@[7] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[7] #[Wizard Vasya] : enact: [throw fireball]
+@[14] #[Wizard Vasya] : result: [it hurts]
+@[14] #[Wizard Vasya] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[throw fireball] -> [it hurts] v: -2]]
+@[14] #[Wizard Vasya] : i feel PAINED
+@[14] #[Wizard Vasya] : my hp:50
+@[14] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[14] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]
+@[14] #[Wizard Vasya] : enact: [throw fireball]
+@[15] #[Mighty Ernest] : result: [healed self]
+@[15] #[Mighty Ernest] : ...learned a primitive interaction [[heal] -> [healed self] v: 1]
+@[15] #[Mighty Ernest] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[heal] -> [healed self] v: 1]]
+@[15] #[Mighty Ernest] : i feel PLEASED
+@[15] #[Mighty Ernest] : my hp:100
+@[15] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]
+@[15] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[15] #[Mighty Ernest] : enact: [select self]
+@[15] #[Mighty Ernest] : result: [targeting self]
+@[15] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select self] -> [targeting self] v: 0]]
+@[15] #[Mighty Ernest] : i feel PLEASED
+@[15] #[Mighty Ernest] : my hp:100
+@[15] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]
+@[15] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[15] #[Mighty Ernest] : enact: [heal]
+@[21] #[Wizard Vasya] : result: [it hurts]
+@[21] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[throw fireball] -> [it hurts] v: -2]]
+@[21] #[Wizard Vasya] : i feel PAINED
+@[21] #[Wizard Vasya] : my hp:25
+@[21] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[21] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[21] #[Wizard Vasya] : enact: [select self]
+@[21] #[Wizard Vasya] : result: [targeting self]
+@[21] #[Wizard Vasya] : i feel PLEASED
+@[21] #[Wizard Vasya] : my hp:25
+@[21] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]
+@[21] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]
+@[21] #[Wizard Vasya] : enact: [throw fireball]
+@[25] #[Mighty Ernest] : result: [healed self]
+@[25] #[Mighty Ernest] : i feel PLEASED
+@[25] #[Mighty Ernest] : my hp:100
+@[25] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]
+@[25] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]
+@[25] #[Mighty Ernest] : enact: [select opponent]
+@[26] #[Mighty Ernest] : result: [targeting opponent]
+@[26] #[Mighty Ernest] : ...learned a primitive interaction [[select opponent] -> [targeting opponent] v: 0]
+@[26] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select opponent] -> [targeting opponent] v: 0]]
+@[26] #[Mighty Ernest] : i feel PLEASED
+@[26] #[Mighty Ernest] : my hp:100
+@[26] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]
+@[26] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[26] #[Mighty Ernest] : enact: [select self]
+@[26] #[Mighty Ernest] : result: [targeting self]
+@[26] #[Mighty Ernest] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[select self] -> [targeting self] v: 0]]
+@[26] #[Mighty Ernest] : i feel PLEASED
+@[26] #[Mighty Ernest] : my hp:100
+@[26] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]
+@[26] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[26] #[Mighty Ernest] : enact: [heal]
+@[28] #[Wizard Vasya] : result: [it hurts]
+@[28] #[Wizard Vasya] : i feel PAINED
+@[28] #[Wizard Vasya] : my hp:0
+@[28] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[28] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[28] #[Wizard Vasya] : enact: [select opponent]
+@[29] #[Wizard Vasya] : result: [targeting opponent]
+@[29] #[Wizard Vasya] : ...learned a primitive interaction [[select opponent] -> [targeting opponent] v: 0]
+@[29] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[select opponent] -> [targeting opponent] v: 0]]
+@[29] #[Wizard Vasya] : i feel PLEASED
+@[29] #[Wizard Vasya] : my hp:0
+@[29] #[Wizard Vasya] : ...context [[select opponent] -> [targeting opponent] v: 0]
+@[29] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[29] #[Wizard Vasya] : enact: [throw fireball]
+@[36] #[Mighty Ernest] : result: [healed self]
+@[36] #[Mighty Ernest] : i feel PLEASED
+@[36] #[Mighty Ernest] : my hp:75
+@[36] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]
+@[36] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]
+@[36] #[Mighty Ernest] : enact: [sword strike]
+@[36] #[Wizard Vasya] : result: [hit opponent]
+@[36] #[Wizard Vasya] : ...learned a primitive interaction [[throw fireball] -> [hit opponent] v: 1]
+@[36] #[Wizard Vasya] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[throw fireball] -> [hit opponent] v: 1]]
+@[36] #[Wizard Vasya] : i feel PLEASED
+@[36] #[Wizard Vasya] : my hp:0
+@[36] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]
+@[36] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[36] #[Wizard Vasya] : enact: [heal]
+@[41] #[Mighty Ernest] : result: [it hurts]
+@[41] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[sword strike] -> [it hurts] v: -2]]
+@[41] #[Mighty Ernest] : i feel PAINED
+@[41] #[Mighty Ernest] : my hp:58
+@[41] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]
+@[41] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]
+@[41] #[Mighty Ernest] : enact: [select opponent]
+@[42] #[Mighty Ernest] : result: [targeting opponent]
+@[42] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[select opponent] -> [targeting opponent] v: 0]]
+@[42] #[Mighty Ernest] : i feel PLEASED
+@[42] #[Mighty Ernest] : my hp:58
+@[42] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]
+@[42] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]
+@[42] #[Mighty Ernest] : enact: [heal]
+@[46] #[Wizard Vasya] : result: [healed opponent]
+@[46] #[Wizard Vasya] : ...learned a primitive interaction [[heal] -> [healed opponent] v: -1]
+@[46] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[heal] -> [healed opponent] v: -1]]
+@[46] #[Wizard Vasya] : i feel PAINED
+@[46] #[Wizard Vasya] : my hp:0
+@[46] #[Wizard Vasya] : ...context [[heal] -> [healed opponent] v: -1]
+@[46] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[46] #[Wizard Vasya] : enact: [select self]
+@[46] #[Wizard Vasya] : result: [targeting self]
+@[46] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed opponent] v: -1] ---> [[select self] -> [targeting self] v: 0]]
+@[46] #[Wizard Vasya] : i feel PLEASED
+@[46] #[Wizard Vasya] : my hp:0
+@[46] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]
+@[46] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]
+@[46] #[Wizard Vasya] : enact: [throw fireball]
+@[52] #[Mighty Ernest] : result: [healed opponent]
+@[52] #[Mighty Ernest] : ...learned a primitive interaction [[heal] -> [healed opponent] v: -1]
+@[52] #[Mighty Ernest] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[heal] -> [healed opponent] v: -1]]
+@[52] #[Mighty Ernest] : i feel PAINED
+@[52] #[Mighty Ernest] : my hp:98
+@[52] #[Mighty Ernest] : ...context [[heal] -> [healed opponent] v: -1]
+@[52] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[52] #[Mighty Ernest] : enact: [select self]
+@[52] #[Mighty Ernest] : result: [targeting self]
+@[52] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed opponent] v: -1] ---> [[select self] -> [targeting self] v: 0]]
+@[52] #[Mighty Ernest] : i feel PLEASED
+@[52] #[Mighty Ernest] : my hp:98
+@[52] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]
+@[52] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[52] #[Mighty Ernest] : enact: [heal]
+@[53] #[Wizard Vasya] : result: [it hurts]
+@[53] #[Wizard Vasya] : i feel PAINED
+@[53] #[Wizard Vasya] : my hp:15
+@[53] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[53] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]
+@[53] #[Wizard Vasya] : enact: [throw fireball]
+@[60] #[Wizard Vasya] : result: [it hurts]
+@[60] #[Wizard Vasya] : i feel PAINED
+@[60] #[Wizard Vasya] : my hp:-10
+@[60] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[60] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]
+@[60] #[Wizard Vasya] : enact: [heal]
+@[62] #[Mighty Ernest] : result: [healed self]
+@[62] #[Mighty Ernest] : i feel PLEASED
+@[62] #[Mighty Ernest] : my hp:100
+@[62] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]
+@[62] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]
+@[62] #[Mighty Ernest] : enact: [sword strike]
+@[67] #[Mighty Ernest] : result: [it hurts]
+@[67] #[Mighty Ernest] : i feel PAINED
+@[67] #[Mighty Ernest] : my hp:83
+@[67] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]
+@[67] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0]]
+@[67] #[Mighty Ernest] : enact: [sword strike]
+@[70] #[Wizard Vasya] : result: [healed self]
+@[70] #[Wizard Vasya] : ...learned a primitive interaction [[heal] -> [healed self] v: 1]
+@[70] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[heal] -> [healed self] v: 1]]
+@[70] #[Wizard Vasya] : i feel PLEASED
+@[70] #[Wizard Vasya] : my hp:30
+@[70] #[Wizard Vasya] : ...context [[heal] -> [healed self] v: 1]
+@[70] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[70] #[Wizard Vasya] : enact: [select self]
+@[70] #[Wizard Vasya] : result: [targeting self]
+@[70] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select self] -> [targeting self] v: 0]]
+@[70] #[Wizard Vasya] : i feel PLEASED
+@[70] #[Wizard Vasya] : my hp:30
+@[70] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]
+@[70] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]
+@[70] #[Wizard Vasya] : enact: [throw fireball]
+@[72] #[Mighty Ernest] : result: [it hurts]
+@[72] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[sword strike] -> [it hurts] v: -2]]
+@[72] #[Mighty Ernest] : i feel PAINED
+@[72] #[Mighty Ernest] : my hp:66
+@[72] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]
+@[72] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]
+@[72] #[Mighty Ernest] : enact: [sword strike]
+@[77] #[Wizard Vasya] : result: [it hurts]
+@[77] #[Wizard Vasya] : i feel PAINED
+@[77] #[Wizard Vasya] : my hp:5
+@[77] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[77] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[heal] -> [healed self] v: 1], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]
+@[77] #[Wizard Vasya] : enact: [heal]
+@[77] #[Mighty Ernest] : result: [it hurts]
+@[77] #[Mighty Ernest] : i feel PAINED
+@[77] #[Mighty Ernest] : my hp:49
+@[77] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]
+@[77] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]
+@[77] #[Mighty Ernest] : enact: [sword strike]
+@[82] #[Mighty Ernest] : result: [it hurts]
+@[82] #[Mighty Ernest] : i feel PAINED
+@[82] #[Mighty Ernest] : my hp:32
+@[82] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]
+@[82] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]
+@[82] #[Mighty Ernest] : enact: [sword strike]
+@[87] #[Wizard Vasya] : result: [healed self]
+@[87] #[Wizard Vasya] : i feel PLEASED
+@[87] #[Wizard Vasya] : my hp:45
+@[87] #[Wizard Vasya] : ...context [[heal] -> [healed self] v: 1]
+@[87] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]
+@[87] #[Wizard Vasya] : enact: [throw fireball]
+@[87] #[Mighty Ernest] : result: [it hurts]
+@[87] #[Mighty Ernest] : i feel PAINED
+@[87] #[Mighty Ernest] : my hp:15
+@[87] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]
+@[87] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]
+@[87] #[Mighty Ernest] : enact: [heal]
+@[94] #[Wizard Vasya] : result: [it hurts]
+@[94] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[throw fireball] -> [it hurts] v: -2]]
+@[94] #[Wizard Vasya] : i feel PAINED
+@[94] #[Wizard Vasya] : my hp:20
+@[94] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]
+@[94] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[heal] -> [healed self] v: 1], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]
+@[94] #[Wizard Vasya] : enact: [heal]
+@[97] #[Mighty Ernest] : result: [healed self]
+@[97] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[heal] -> [healed self] v: 1]]
+@[97] #[Mighty Ernest] : i feel PLEASED
+@[97] #[Mighty Ernest] : my hp:55
+@[97] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]
+@[97] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]
+@[97] #[Mighty Ernest] : enact: [select self]
+@[97] #[Mighty Ernest] : result: [targeting self]
+@[97] #[Mighty Ernest] : i feel PLEASED
+@[97] #[Mighty Ernest] : my hp:55
+@[97] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]
+@[97] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[97] #[Mighty Ernest] : enact: [heal]
+@[104] #[Wizard Vasya] : result: [healed self]
+@[104] #[Wizard Vasya] : i feel PLEASED
+@[104] #[Wizard Vasya] : my hp:60
+@[104] #[Wizard Vasya] : ...context [[heal] -> [healed self] v: 1]
+@[104] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]
+@[104] #[Wizard Vasya] : enact: [select opponent]
+@[105] #[Wizard Vasya] : result: [targeting opponent]
+@[105] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select opponent] -> [targeting opponent] v: 0]]
+@[105] #[Wizard Vasya] : i feel PLEASED
+@[105] #[Wizard Vasya] : my hp:60
+@[105] #[Wizard Vasya] : ...context [[select opponent] -> [targeting opponent] v: 0]
+@[105] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [hit opponent] v: 1]]
+@[105] #[Wizard Vasya] : enact: [throw fireball]
+@[107] #[Mighty Ernest] : result: [healed self]
+@[107] #[Mighty Ernest] : i feel PLEASED
+@[107] #[Mighty Ernest] : my hp:95
+@[107] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]
+@[107] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]
+@[107] #[Mighty Ernest] : enact: [select opponent]
+@[108] #[Mighty Ernest] : result: [targeting opponent]
+@[108] #[Mighty Ernest] : i feel PLEASED
+@[108] #[Mighty Ernest] : my hp:95
+@[108] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]
+@[108] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]
+@[108] #[Mighty Ernest] : enact: [select opponent]
+@[109] #[Mighty Ernest] : result: [targeting opponent]
+@[109] #[Mighty Ernest] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[select opponent] -> [targeting opponent] v: 0]]
+@[109] #[Mighty Ernest] : i feel PLEASED
+@[109] #[Mighty Ernest] : my hp:95
+@[109] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]
+@[109] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1], [[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0]]
+@[109] #[Mighty Ernest] : enact: [heal]
+@[112] #[Wizard Vasya] : result: [hit opponent]
+@[112] #[Wizard Vasya] : i feel PLEASED
+@[112] #[Wizard Vasya] : my hp:60
+@[112] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]
+@[112] #[Wizard Vasya] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1]]
+@[112] #[Wizard Vasya] : enact: [select self]
+@[112] #[Wizard Vasya] : result: [targeting self]
+@[112] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[select self] -> [targeting self] v: 0]]
+@[112] #[Wizard Vasya] : i feel PLEASED
+@[112] #[Wizard Vasya] : my hp:60
+@[112] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]
+@[112] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]
+@[112] #[Wizard Vasya] : enact: [select self]
+@[112] #[Wizard Vasya] : result: [targeting self]
+@[112] #[Wizard Vasya] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[select self] -> [targeting self] v: 0]]
+@[112] #[Wizard Vasya] : i feel PLEASED
+@[112] #[Wizard Vasya] : my hp:60
+@[112] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]
+@[112] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[throw fireball] -> [it hurts] v: -2]]
+@[112] #[Wizard Vasya] : enact: [select opponent]
+@[113] #[Wizard Vasya] : result: [targeting opponent]
+@[113] #[Wizard Vasya] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[select opponent] -> [targeting opponent] v: 0]]
+@[113] #[Wizard Vasya] : i feel PLEASED
+@[113] #[Wizard Vasya] : my hp:60
+@[113] #[Wizard Vasya] : ...context [[select opponent] -> [targeting opponent] v: 0]
+@[113] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [hit opponent] v: 1]]
+@[113] #[Wizard Vasya] : enact: [throw fireball]
+@[119] #[Mighty Ernest] : result: [healed opponent]
+@[119] #[Mighty Ernest] : i feel PAINED
+@[119] #[Mighty Ernest] : my hp:70
+@[119] #[Mighty Ernest] : ...context [[heal] -> [healed opponent] v: -1]
+@[119] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]
+@[119] #[Mighty Ernest] : enact: [sword strike]
+@[120] #[Wizard Vasya] : result: [hit opponent]
+@[120] #[Wizard Vasya] : i feel PLEASED
+@[120] #[Wizard Vasya] : my hp:100
+@[120] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]
+@[120] #[Wizard Vasya] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]
+@[120] #[Wizard Vasya] : enact: [throw fireball]
+@[124] #[Mighty Ernest] : result: [hit opponent]
+@[124] #[Mighty Ernest] : ...learned a primitive interaction [[sword strike] -> [hit opponent] v: 1]
+@[124] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed opponent] v: -1] ---> [[sword strike] -> [hit opponent] v: 1]]
+@[124] #[Mighty Ernest] : i feel PLEASED
+@[124] #[Mighty Ernest] : my hp:45
+@[124] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]
+@[124] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[124] #[Mighty Ernest] : enact: [sword strike]
+@[127] #[Wizard Vasya] : result: [hit opponent]
+@[127] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[throw fireball] -> [hit opponent] v: 1]]
+@[127] #[Wizard Vasya] : i feel PLEASED
+@[127] #[Wizard Vasya] : my hp:83
+@[127] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]
+@[127] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [hit opponent] v: 1], [[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]
+@[127] #[Wizard Vasya] : enact: [throw fireball]
+@[129] #[Mighty Ernest] : result: [hit opponent]
+@[129] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [hit opponent] v: 1] ---> [[sword strike] -> [hit opponent] v: 1]]
+@[129] #[Mighty Ernest] : i feel PLEASED
+@[129] #[Mighty Ernest] : my hp:20
+@[129] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]
+@[129] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]
+@[129] #[Mighty Ernest] : enact: [sword strike]
+@[134] #[Mighty Ernest] : defeated
+@[134] #[Mighty Ernest] : revived
+@[134] #[Wizard Vasya] : result: [won]
+@[134] #[Wizard Vasya] : ...learned a primitive interaction [[throw fireball] -> [won] v: 2]
+@[134] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[throw fireball] -> [won] v: 2]]
+@[134] #[Wizard Vasya] : i feel PLEASED
+@[134] #[Wizard Vasya] : my hp:49
+@[134] #[Wizard Vasya] : ...context [[throw fireball] -> [won] v: 2]
+@[134] #[Wizard Vasya] : ...anticipate primitive interactions []
+@[134] #[Wizard Vasya] : enact: [throw fireball]
+@[134] #[Mighty Ernest] : result: [hit opponent]
+@[134] #[Mighty Ernest] : i feel PLEASED
+@[134] #[Mighty Ernest] : my hp:100
+@[134] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]
+@[134] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]
+@[134] #[Mighty Ernest] : enact: [sword strike]
+@[139] #[Mighty Ernest] : result: [hit opponent]
+@[139] #[Mighty Ernest] : i feel PLEASED
+@[139] #[Mighty Ernest] : my hp:100
+@[139] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]
+@[139] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]
+@[139] #[Mighty Ernest] : enact: [sword strike]
+@[141] #[Wizard Vasya] : result: [hit opponent]
+@[141] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [won] v: 2] ---> [[throw fireball] -> [hit opponent] v: 1]]
+@[141] #[Wizard Vasya] : i feel PLEASED
+@[141] #[Wizard Vasya] : my hp:32
+@[141] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]
+@[141] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [won] v: 2], [[throw fireball] -> [hit opponent] v: 1], [[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]
+@[141] #[Wizard Vasya] : enact: [throw fireball]
+@[144] #[Mighty Ernest] : result: [hit opponent]
+@[144] #[Mighty Ernest] : i feel PLEASED
+@[144] #[Mighty Ernest] : my hp:75
+@[144] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]
+@[144] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]
+@[144] #[Mighty Ernest] : enact: [sword strike]
+@[148] #[Wizard Vasya] : result: [hit opponent]
+@[148] #[Wizard Vasya] : i feel PLEASED
+@[148] #[Wizard Vasya] : my hp:15
+@[148] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]
+@[148] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [won] v: 2], [[throw fireball] -> [hit opponent] v: 1], [[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]
+@[148] #[Wizard Vasya] : enact: [throw fireball]
+@[149] #[Wizard Vasya] : defeated
+@[149] #[Wizard Vasya] : revived
+@[149] #[Mighty Ernest] : result: [won]
+@[149] #[Mighty Ernest] : ...learned a primitive interaction [[sword strike] -> [won] v: 2]
+@[149] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [hit opponent] v: 1] ---> [[sword strike] -> [won] v: 2]]
+@[149] #[Mighty Ernest] : i feel PLEASED
+@[149] #[Mighty Ernest] : my hp:50
+@[149] #[Mighty Ernest] : ...context [[sword strike] -> [won] v: 2]
+@[149] #[Mighty Ernest] : ...anticipate primitive interactions []
+@[149] #[Mighty Ernest] : enact: [sword strike]

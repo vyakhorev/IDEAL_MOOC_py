@@ -1,0 +1,991 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset204 Times New Roman;}{\f4\fswiss\fprq2\fcharset204 Arial;}{\f5\fnil\fprq0\fcharset204 OpenSymbol{\*\falt Arial Unicode MS};}{\f6\fnil\fprq0\fcharset204 Verdana{\*\falt Helvetica};}{\f7\fmodern\fprq1\fcharset204 Courier New;}{\f8\fnil\fprq2\fcharset204 Mangal;}{\f9\fnil\fprq0\fcharset204 Mangal;}{\f10\froman\fprq0\fcharset128 ;}{\f11\fnil\fprq2\fcharset204 Microsoft YaHei;}}
+{\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049 Default;}
+{\*\cs15\snext15 Numbering Symbols;}
+{\*\cs16\snext16\hich\af5\dbch\af5\loch\f5 Bullets;}
+{\s17\sbasedon0\snext18\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\sb240\sa120\keepn\ltrpar\cf0\kerning1\hich\af8\langfe2052\dbch\af11\loch\f4\fs28\lang1049 Heading;}
+{\s18\sbasedon0\snext18\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\sb0\sa120\ltrpar\cf0\kerning1\hich\af3\langfe2052\dbch\af3\loch\f3\fs24\lang1049 Text body;}
+{\s19\sbasedon18\snext19\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\sb0\sa120\ltrpar\cf0\kerning1\hich\af9\langfe2052\dbch\af3\loch\f3\fs24\lang1049 List;}
+{\s20\sbasedon0\snext20\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\sb120\sa120\ltrpar\cf0\i\kerning1\hich\af9\langfe2052\dbch\af3\ai\loch\f3\fs24\lang1049 Caption;}
+{\s21\sbasedon0\snext21\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\ltrpar\cf0\kerning1\hich\af9\langfe2052\dbch\af3\loch\f3\fs24\lang1049 Index;}
+}{\info{\author Alexey Vyakhorev}{\creatim\yr2014\mo10\dy26\hr23\min42}{\revtim\yr2014\mo11\dy9\hr21\min43}{\printim\yr0\mo0\dy0\hr0\min0}{\comment OpenOffice}{\vern4010}}\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709\deftab709
+
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse195\pgwsxn11906\pghsxn16838\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt0 Default;}}
+\formshade{\*\pgdscno0}\paperh16838\paperw11906\margl1134\margr1134\margt1134\margb1134\sectd\sbknone\sectunlocked1\pgndec\pgwsxn11906\pghsxn16838\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pgndec\pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\rtlch \ltrch\loch\lang1033
+Second homework with IDEAL MOOC 2014}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+According to }{\cf1\rtlch \ltrch\loch\fs19\lang1033\loch\f6
+#IDEALMOOC034 the task is to implement a different environment for the third part of the course. Additionally to running a Java program with uncommented lines (which is quite simple thanks to material provided), our team \'93Raspby\'94 implemented a different setting.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+A small program simulates a fight between a swordsman (}{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Mighty Ernest)}{\rtlch \ltrch\loch\lang1033
+ and a wizard (}{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Wizard Vasya)}{\rtlch \ltrch\loch\lang1033
+. They both have an attack and a heal action. Plus to that, they have to choose the target \'96 they do not know that attacking themselves hurts.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+Each agent can do primitive actions:}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+1) attack}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+2) heal}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+3) select opponent}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+4) select self}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+Each action, being enacted, returns a predefined tuple (result, valence). Result is just a string. Valence is aggressive - positive for attacking opponent, negative for attacking self, positive for healing self, negative for healing the opponent. Given only after the action (experiment) is enacted.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+A result should look like the agent remembers composite interactions and stop attacking himself and healing opponent. However, they are still not able to do anything smart in a global context \'96 learn a simple strategy to check hp level before choosing a heal or an attack action. That would require three actions to remember.. You should scroll down and check that agents learned how to do things that are pleasurable in this simple setting.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch\lang1033
+LOG FROM THE SYSTEM }{\i\b\ai\ab\rtlch \ltrch\loch\lang1033
+with comments}{\rtlch \ltrch\loch\lang1033
+ (time is in the brackets [ ])}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : ...context None}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest enacts a random action which is to target himself.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Wizard Vasya] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Wizard Vasya] : ...context None}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Vasya enacts a random action which is fireball aimed at the default target (self)}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : ...learned a primitive interaction [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Choosing a target is fast. Ernest learned a primitive interaction that do not mean anything to him yet.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Feelings only indicate the received valence after last interaction. Ernest received 0 which is also nice. So he is PLEASED.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+The context is the last enacted interaction.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[0] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest enacts a random action since he anticipate nothing.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...learned a primitive interaction [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest learns his first complex (}{\cf1\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+composite) interaction which is \'93target self and strike with a sword hurts\'94.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest feels a sword strike at himself. He is not happy with it.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : my hp:83}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+He knows only bad things \'96 that's why he anticipate an empty list}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest enacts a random action \'96 he panics (this differs from original setting  \'96 in Java code we picked other interation).}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Well, targeting self is better than hitting self. So he feels pleased.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : my hp:83}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+He knows that string with sword after selecting self hurts. }
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Still in panic.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Not a useful set of primitive interactions}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : my hp:83}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[5] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Still being in a panic of \'93no good choices\'94, Ernest enacts a random action \'96 heals (himself since he is targeting himself).}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : ...learned a primitive interaction [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Now time shifted to Vasya. He receives a fireball he threw on himself. The only difference from Ernest is that he does not know the context. The target \'93self\'94 was a default one.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+So he feels pained}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : my hp:75}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Anticipate nothing since he does not have any experience.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+He enacts a random action}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : ...learned a primitive interaction [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+And learns not a useful complex interaction}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : my hp:75}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Still nothing to anticipate.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[7] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Panic \'96 he does not yet know what to do with himself. Pick a random action which is a fireball. Unlucky soul..}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[14] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Fireball hit Vasya.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[14] #[Wizard Vasya] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Know he knows not only a primitive interaction of throwing a fireball, he also knows a context for that. He will no longer throw any fireball at himself (at least he is not in a panic)}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[14] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[14] #[Wizard Vasya] : my hp:50}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[14] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[14] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[14] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Well.. Vasya panics since he anticipate no good solution. He is very unlucky.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : ...learned a primitive interaction [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[heal] -> [healed self] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest discovers that healing himself is a good thing.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+He has nothing to anticipate after healing himself. So he picks a random action.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest knows all the possibilities of what to after selecting self.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[15] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+He heals himself since he enjoys that.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Vasya learned a very tough complex interaction.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : my hp:25}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+After a small panic, Vasya chooses a completely random action.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : my hp:25}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[21] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+After a small panic, Vasya chooses a completely random action (that was random, 4 times in a row..)}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[25] #[Mighty Ernest] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[25] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[25] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[25] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[25] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[25] #[Mighty Ernest] : enact: [select opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest chooses a random action since he does not know anything nice after healing self (he have not yet done that two times in a sequence)}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : result: [targeting opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : ...learned a primitive interaction [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+A new target is a stress for Ernest. He picks up a random action.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[26] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+He knows what to do after selecting self.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[28] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[28] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[28] #[Wizard Vasya] : my hp:0}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Vasya has zero HP actually.. I didn't account for the possibility of hitting oneself 4 times in a row..}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[28] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[28] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[28] #[Wizard Vasya] : enact: [select opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Vasya chooses a random action which is to select opponent. He faced only bad sequences by far so far.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : result: [targeting opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : ...learned a primitive interaction [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : my hp:0}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : ...context [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[29] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Vasya do not know what to do after targeting opponent. He pick up a random action.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Mighty Ernest] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Mighty Ernest] : my hp:75}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+After healing himself, Ernest do not know what to do. He attacks himself..}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : ...learned a primitive interaction [[throw fireball] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[throw fireball] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Vasya enjoys throwing fireballs not on himself.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : my hp:0}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[36] #[Wizard Vasya] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Now he does not know what to do. He heals the active target.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[41] #[Mighty Ernest] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[41] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[41] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[41] #[Mighty Ernest] : my hp:58}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[41] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[41] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[41] #[Mighty Ernest] : enact: [select opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest picks up a random action.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[42] #[Mighty Ernest] : result: [targeting opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[42] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[42] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[42] #[Mighty Ernest] : my hp:58}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[42] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[42] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[42] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\i\b\hich\af7\dbch\af7\ai\ab\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+Ernest picks up a random action.}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : result: [healed opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : ...learned a primitive interaction [[heal] -> [healed opponent] v: -1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[heal] -> [healed opponent] v: -1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : my hp:0}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : ...context [[heal] -> [healed opponent] v: -1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed opponent] v: -1] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : my hp:0}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[46] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : result: [healed opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : ...learned a primitive interaction [[heal] -> [healed opponent] v: -1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[heal] -> [healed opponent] v: -1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : my hp:98}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : ...context [[heal] -> [healed opponent] v: -1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed opponent] v: -1] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : my hp:98}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[52] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[53] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[53] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[53] #[Wizard Vasya] : my hp:15}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[53] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[53] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[53] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[60] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[60] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[60] #[Wizard Vasya] : my hp:-10}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[60] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[60] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[60] #[Wizard Vasya] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[62] #[Mighty Ernest] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[62] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[62] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[62] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[62] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[62] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[67] #[Mighty Ernest] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[67] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[67] #[Mighty Ernest] : my hp:83}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[67] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[67] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[67] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : ...learned a primitive interaction [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [it hurts] v: -2] ---> [[heal] -> [healed self] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : my hp:30}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : my hp:30}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[70] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[72] #[Mighty Ernest] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[72] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[72] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[72] #[Mighty Ernest] : my hp:66}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[72] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[72] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[72] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Wizard Vasya] : my hp:5}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[heal] -> [healed self] v: 1], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Wizard Vasya] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Mighty Ernest] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Mighty Ernest] : my hp:49}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[77] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[82] #[Mighty Ernest] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[82] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[82] #[Mighty Ernest] : my hp:32}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[82] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[82] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[82] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Wizard Vasya] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Wizard Vasya] : my hp:45}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Wizard Vasya] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Mighty Ernest] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Mighty Ernest] : my hp:15}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Mighty Ernest] : ...context [[sword strike] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Mighty Ernest] : ...anticipate primitive interactions [[[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0], [[sword strike] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[87] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[94] #[Wizard Vasya] : result: [it hurts]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[94] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[94] #[Wizard Vasya] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[94] #[Wizard Vasya] : my hp:20}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[94] #[Wizard Vasya] : ...context [[throw fireball] -> [it hurts] v: -2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[94] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[heal] -> [healed self] v: 1], [[select opponent] -> [targeting opponent] v: 0], [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[94] #[Wizard Vasya] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [it hurts] v: -2] ---> [[heal] -> [healed self] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : my hp:55}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : my hp:55}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed self] v: 1], [[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[97] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[104] #[Wizard Vasya] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[104] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[104] #[Wizard Vasya] : my hp:60}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[104] #[Wizard Vasya] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[104] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[104] #[Wizard Vasya] : enact: [select opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[105] #[Wizard Vasya] : result: [targeting opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[105] #[Wizard Vasya] : ...learned a complex interaction [[[heal] -> [healed self] v: 1] ---> [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[105] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[105] #[Wizard Vasya] : my hp:60}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[105] #[Wizard Vasya] : ...context [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[105] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[105] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[107] #[Mighty Ernest] : result: [healed self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[107] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[107] #[Mighty Ernest] : my hp:95}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[107] #[Mighty Ernest] : ...context [[heal] -> [healed self] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[107] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [it hurts] v: -2], [[select self] -> [targeting self] v: 0], [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[107] #[Mighty Ernest] : enact: [select opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[108] #[Mighty Ernest] : result: [targeting opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[108] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[108] #[Mighty Ernest] : my hp:95}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[108] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[108] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[108] #[Mighty Ernest] : enact: [select opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[109] #[Mighty Ernest] : result: [targeting opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[109] #[Mighty Ernest] : ...learned a complex interaction [[[select opponent] -> [targeting opponent] v: 0] ---> [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[109] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[109] #[Mighty Ernest] : my hp:95}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[109] #[Mighty Ernest] : ...context [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[109] #[Mighty Ernest] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1], [[select opponent] -> [targeting opponent] v: 0], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[109] #[Mighty Ernest] : enact: [heal]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : my hp:60}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : my hp:60}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : enact: [select self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : result: [targeting self]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : my hp:60}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...context [[select self] -> [targeting self] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0], [[throw fireball] -> [it hurts] v: -2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[112] #[Wizard Vasya] : enact: [select opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[113] #[Wizard Vasya] : result: [targeting opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[113] #[Wizard Vasya] : ...learned a complex interaction [[[select self] -> [targeting self] v: 0] ---> [[select opponent] -> [targeting opponent] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[113] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[113] #[Wizard Vasya] : my hp:60}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[113] #[Wizard Vasya] : ...context [[select opponent] -> [targeting opponent] v: 0]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[113] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[113] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[119] #[Mighty Ernest] : result: [healed opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[119] #[Mighty Ernest] : i feel PAINED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[119] #[Mighty Ernest] : my hp:70}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[119] #[Mighty Ernest] : ...context [[heal] -> [healed opponent] v: -1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[119] #[Mighty Ernest] : ...anticipate primitive interactions [[[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[119] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[120] #[Wizard Vasya] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[120] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[120] #[Wizard Vasya] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[120] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[120] #[Wizard Vasya] : ...anticipate primitive interactions [[[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[120] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : ...learned a primitive interaction [[sword strike] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : ...learned a complex interaction [[[heal] -> [healed opponent] v: -1] ---> [[sword strike] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : my hp:45}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[124] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[127] #[Wizard Vasya] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[127] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[throw fireball] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[127] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[127] #[Wizard Vasya] : my hp:83}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[127] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[127] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [hit opponent] v: 1], [[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[127] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[129] #[Mighty Ernest] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[129] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [hit opponent] v: 1] ---> [[sword strike] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[129] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[129] #[Mighty Ernest] : my hp:20}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[129] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[129] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[129] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : defeated}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : revived}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : result: [won]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : ...learned a primitive interaction [[throw fireball] -> [won] v: 2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [hit opponent] v: 1] ---> [[throw fireball] -> [won] v: 2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : my hp:49}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : ...context [[throw fireball] -> [won] v: 2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[134] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[139] #[Mighty Ernest] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[139] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[139] #[Mighty Ernest] : my hp:100}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[139] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[139] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[139] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[141] #[Wizard Vasya] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[141] #[Wizard Vasya] : ...learned a complex interaction [[[throw fireball] -> [won] v: 2] ---> [[throw fireball] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[141] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[141] #[Wizard Vasya] : my hp:32}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[141] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[141] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [won] v: 2], [[throw fireball] -> [hit opponent] v: 1], [[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[141] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[144] #[Mighty Ernest] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[144] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[144] #[Mighty Ernest] : my hp:75}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[144] #[Mighty Ernest] : ...context [[sword strike] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[144] #[Mighty Ernest] : ...anticipate primitive interactions [[[sword strike] -> [hit opponent] v: 1]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[144] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[148] #[Wizard Vasya] : result: [hit opponent]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[148] #[Wizard Vasya] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[148] #[Wizard Vasya] : my hp:15}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[148] #[Wizard Vasya] : ...context [[throw fireball] -> [hit opponent] v: 1]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[148] #[Wizard Vasya] : ...anticipate primitive interactions [[[throw fireball] -> [won] v: 2], [[throw fireball] -> [hit opponent] v: 1], [[heal] -> [healed opponent] v: -1], [[select self] -> [targeting self] v: 0]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[148] #[Wizard Vasya] : enact: [throw fireball]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Wizard Vasya] : defeated}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Wizard Vasya] : revived}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : result: [won]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : ...learned a primitive interaction [[sword strike] -> [won] v: 2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : ...learned a complex interaction [[[sword strike] -> [hit opponent] v: 1] ---> [[sword strike] -> [won] v: 2]]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : i feel PLEASED}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : my hp:50}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : ...context [[sword strike] -> [won] v: 2]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : ...anticipate primitive interactions []}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\hich\af7\dbch\af7\rtlch \ltrch\loch\fs22\lang1033\loch\f7
+@[149] #[Mighty Ernest] : enact: [sword strike]}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049{\rtlch \ltrch\loch
+}
+\par \pard\plain \s0\ql{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ltrpar\nowidctlpar\cf0\kerning1\hich\af8\langfe2052\dbch\af10\afs24\lang1081\loch\f3\fs24\lang1049\qj{\rtlch \ltrch\loch
+}
+\par }
